@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import Controls from './Controls';
+import UserList from './UserList';
+import Footer from './Footer';
 
 let currentYear = new Date().getFullYear();
 let isLoggedIn = true;
@@ -11,6 +14,8 @@ function App() {
       <p>React Components</p>
       <p>Current Year: {currentYear}</p>
       <p>{isLoggedIn ? "Welcome back!" : "Please log in."}</p>
+      <p>{isLoggedIn ? <><section><Controls /></section> <section><UserList /></section> <footer><Footer /></footer></> : "Please log in."}</p>
+
     </>
   );
 }
